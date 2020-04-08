@@ -1,26 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function App() {
-  const [number, setNumber] = useState("");
-  const [secondNumber, setSecondNumber] = useState("");
+function UseState() {
+  const [number, setNumber] = useState();
+  const [secondNumber, setSecondNumber] = useState();
   const [result, setResult] = useState();
-
-  useEffect(() => {
-    console.log("variável numero", number);
-  });
 
   return (
     <div>
       <input
         type="text"
         value={number}
-        onChange={(e) => setNumber(e.target.value.replace(/\D/g, ""))}
+        onChange={(e) => setNumber(e.target.value)}
       />
       <br />
       <input
         type="text"
         value={secondNumber}
-        onChange={(e) => setSecondNumber(e.target.value.replace(/\D/g, ""))}
+        onChange={(e) => setSecondNumber(e.target.value)}
       />
       <br />
       <input type="text" value={result} />
@@ -34,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default UseState;
